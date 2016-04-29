@@ -7,7 +7,7 @@
 
 _start:
 movl $1, %eax
-movl $9999, %ebx
+movl $1, %ebx
 int $0x80
 
 
