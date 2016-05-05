@@ -9,4 +9,3 @@ _start:
 	movl $1, %ebx	# status
 	int $0x80		# kernel interrupt
 
-
