@@ -9,6 +9,8 @@
 		pushl $2
 		call power
 		addl $8, %esp
+
+		# save answer
 		pushl %eax
 
 		# do second calc
@@ -17,7 +19,20 @@
 		call power
 		addl $8, %esp
 
-		# add both together
+		# put prev answer into %ebx
+		popl %ebx
+
+		# add both together and store into %ebx
+		addl %eax, %ebx
+
+		# do third call
+		pushl %ebx
+        pushl $3
+        pushl $3
+        call power
+        addl $8, %esp
+
+		# sum
 		popl %ebx
 		addl %eax, %ebx
 
