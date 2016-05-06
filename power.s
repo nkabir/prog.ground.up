@@ -1,5 +1,3 @@
-.code32
-
 .section data
 
 .section text
@@ -56,7 +54,7 @@
 	end_power:
 		movl -4(%ebp), %eax
 		movl %ebp, %esp
-		popl $ebp
+		popl %ebp
 		ret
 
 
